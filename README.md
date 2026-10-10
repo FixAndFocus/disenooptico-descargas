@@ -10,7 +10,10 @@ tu ordenador, sin conexión, con la interfaz en el navegador.
 - Fantasmas con el tratamiento de cada cara, bokeh, enfoque y respiración, y la leva de
   enfoque.
 - Rehousing y mecánica: planos ISO 10110, STEP, DXF y atermalización de la carcasa.
-- Mapas de distorsión y de sombreado para VFX.
+- Recementado: qué cemento conviene en cada cara pegada, y el antes y el después.
+- «Detuning»: dar la vuelta a una lente y ver lo que cambia frente a una referencia.
+- Mapas de distorsión y de sombreado para VFX, y vista previa sobre una foto.
+- Emparejar un juego de ópticas: T-stop, tono, distorsión y medidas.
 
 Este repositorio solo tiene los programas ya compilados, la licencia y estas instrucciones.
 El código no es público.
