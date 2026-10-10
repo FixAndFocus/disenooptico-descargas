@@ -14,9 +14,18 @@ tu ordenador, sin conexión, con la interfaz en el navegador.
 - «Detuning»: dar la vuelta a una lente y ver lo que cambia frente a una referencia.
 - Mapas de distorsión y de sombreado para VFX, y vista previa sobre una foto.
 - Emparejar un juego de ópticas: T-stop, tono, distorsión y medidas.
+- Interfaz en castellano y en inglés.
 
 Este repositorio solo tiene los programas ya compilados, la licencia y estas instrucciones.
 El código no es público.
+
+> **English.** disenooptico is an optical design and analysis program for photo and cinema
+> lenses, by Fix and Focus Lab. It runs on your computer, offline, with its interface in the
+> browser, in Spanish or English (Settings → “Idioma · Language”). Get the latest build from
+> **[Releases](../../releases/latest)**: unzip it on Windows and open `disenooptico.exe`, or open
+> the .dmg on macOS and drag it to Applications. The builds are not signed, so the system warns
+> the first time (see “La primera vez” below). Free for private individuals; companies and
+> professional use need a paid license ([LICENSE.md](LICENSE.md)).
 
 ## Descargar
 
