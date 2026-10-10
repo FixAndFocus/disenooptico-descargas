@@ -1,11 +1,11 @@
-# Licencia de uso de disenooptico
+# Licencia de uso de Optaller
 
 Versión 1.0 · 10 de octubre de 2026
 
 **En resumen:** si eres un particular y lo usas para ti, es gratis. Si lo usa una empresa,
 o lo usas en tu trabajo (también como autónomo), necesitas una licencia de pago.
 
-Titular: Fix and Focus Lab (en adelante, «el titular»). disenooptico es un programa de
+Titular: Fix and Focus Lab (en adelante, «el titular»). Optaller es un programa de
 diseño y análisis óptico para fotografía y cine (en adelante, «el programa»): el código, los
 ejecutables y la documentación que lo acompañan.
 

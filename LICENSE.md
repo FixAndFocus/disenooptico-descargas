@@ -1,4 +1,4 @@
-# disenooptico licence
+# Optaller licence
 
 Version 1.0 · 10 October 2026
 
@@ -9,7 +9,7 @@ LICENCIA.md.*
 company uses it, or you use it for work (including as a self-employed professional), you
 need a paid licence.
 
-Licensor: Fix and Focus Lab ("the licensor"). disenooptico is optical design and analysis
+Licensor: Fix and Focus Lab ("the licensor"). Optaller is optical design and analysis
 software for photography and cinema ("the software"): the code, the executables and the
 documentation that comes with them.
 

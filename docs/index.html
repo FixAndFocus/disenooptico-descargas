@@ -1,0 +1,326 @@
+<!doctype html>
+<html lang="en" data-idioma="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Optaller · optical design for photo and cinema lenses</title>
+<meta name="description" content="Optaller: optical design and analysis for photo and cinema lenses, built in a lens workshop. Anamorphics in two axes, cross-validation between engines, ghosts, rehousing. Free for private individuals. Windows and macOS.">
+<link rel="icon" href="img/icono.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400..700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --pagina: #f6f5f1; --superficie: #fcfcfb; --superficie-2: #f0efea;
+  --tinta: #1c1b19; --tinta-2: #52514e; --tinta-3: #6f6d68;
+  --linea: rgba(28, 27, 25, 0.10); --linea-fuerte: rgba(28, 27, 25, 0.20);
+  --acento: #8a5a1c; --acento-tinta: #fcfcfb;
+  --sombra: 0 1px 2px rgba(70, 52, 24, 0.05), 0 24px 48px -28px rgba(70, 52, 24, 0.35);
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --pagina: #121211; --superficie: #1a1a19; --superficie-2: #222220;
+    --tinta: #f2f1ec; --tinta-2: #c3c2b7; --tinta-3: #a3a199;
+    --linea: rgba(255, 255, 255, 0.09); --linea-fuerte: rgba(255, 255, 255, 0.18);
+    --acento: #d4a15a; --acento-tinta: #1a1a19;
+    --sombra: 0 1px 2px rgba(0, 0, 0, 0.45), 0 24px 48px -28px rgba(0, 0, 0, 0.8);
+  }
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: var(--pagina); color: var(--tinta);
+  font-family: "Archivo", ui-sans-serif, system-ui, "Segoe UI", sans-serif;
+  font-size: 17px; line-height: 1.55; -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility;
+}
+html[data-idioma="es"] [lang="en"], html[data-idioma="en"] [lang="es"] { display: none !important; }
+a { color: inherit; text-decoration-color: var(--linea-fuerte); text-underline-offset: 3px; }
+a:hover { text-decoration-color: var(--acento); }
+.ancho { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
+header { border-bottom: 1px solid var(--linea); }
+header .ancho { display: flex; align-items: center; gap: 12px; height: 64px; }
+.marca { font-weight: 700; font-size: 19px; letter-spacing: -0.01em; }
+.de { color: var(--tinta-3); font-size: 14px; }
+.hueco { flex: 1; }
+.idiomas { display: flex; border: 1px solid var(--linea-fuerte); border-radius: 9px; overflow: hidden; }
+.idiomas button {
+  font: inherit; font-size: 14px; padding: 6px 12px; border: 0; background: transparent; color: var(--tinta-2);
+  cursor: pointer;
+}
+.idiomas button[aria-pressed="true"] { background: var(--tinta); color: var(--pagina); }
+h1 { font-size: clamp(34px, 5.2vw, 58px); line-height: 1.04; letter-spacing: -0.025em; margin: 0; font-weight: 700;
+     max-width: 17ch; }
+h2 { font-size: clamp(24px, 3vw, 32px); line-height: 1.15; letter-spacing: -0.015em; margin: 0 0 12px; }
+h3 { font-size: 17px; margin: 0 0 4px; }
+p { margin: 0 0 14px; color: var(--tinta-2); }
+.portada { padding: 72px 0 40px; }
+.portada p { font-size: 20px; max-width: 46ch; margin-top: 20px; }
+.acciones { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; align-items: center; }
+.boton {
+  display: inline-block; padding: 13px 20px; border-radius: 9px; text-decoration: none; font-weight: 600;
+  background: var(--acento); color: var(--acento-tinta);
+}
+.boton.claro { background: transparent; color: var(--tinta); border: 1px solid var(--linea-fuerte); }
+.letra-chica { font-size: 14px; color: var(--tinta-3); margin-top: 14px; max-width: 70ch; }
+figure { margin: 0; }
+.captura {
+  border: 1px solid var(--linea-fuerte); border-radius: 14px; overflow: hidden; box-shadow: var(--sombra);
+  background: var(--superficie);
+}
+.captura img { display: block; width: 100%; height: auto; }
+.grande { margin: 24px 0 88px; }
+section { padding: 64px 0; border-top: 1px solid var(--linea); }
+.fila { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: 48px; align-items: center; }
+.fila.al-reves > :first-child { order: 2; }
+.numero { font-variant-numeric: tabular-nums; color: var(--acento); font-weight: 600; font-size: 14px;
+          letter-spacing: 0.08em; margin-bottom: 10px; }
+ul { margin: 14px 0 0; padding: 0; list-style: none; }
+li { padding: 9px 0; border-top: 1px solid var(--linea); color: var(--tinta-2); font-size: 16px; }
+li strong { color: var(--tinta); font-weight: 600; }
+.dos { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 48px; }
+.caja { background: var(--superficie); border: 1px solid var(--linea); border-radius: 14px; padding: 28px; }
+code { font-family: ui-monospace, "Cascadia Mono", Consolas, monospace; font-size: 0.9em;
+       background: var(--superficie-2); padding: 1px 5px; border-radius: 5px; }
+footer { border-top: 1px solid var(--linea); padding: 32px 0 56px; color: var(--tinta-3); font-size: 14px; }
+footer p { color: inherit; margin: 0 0 6px; }
+@media (max-width: 860px) {
+  .ancho { padding: 0 16px; }
+  .portada { padding: 44px 0 24px; }
+  .fila, .dos { grid-template-columns: minmax(0, 1fr); gap: 24px; }
+  .fila.al-reves > :first-child { order: 0; }
+  section { padding: 44px 0; }
+  .grande { margin-bottom: 48px; }
+  .de { display: none; }
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="ancho">
+    <svg width="26" height="26" viewBox="0 0 32 32" aria-hidden="true">
+      <path d="M4 16h24" stroke="var(--acento)" stroke-width="1.4" stroke-dasharray="1.6 2.2" stroke-linecap="round"/>
+      <path d="M16 5c4.6 3.4 4.6 18.6 0 22c-4.6-3.4-4.6-18.6 0-22z" fill="var(--acento)" fill-opacity=".14" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+    </svg>
+    <span class="marca">Optaller</span><span class="de">Fix and Focus Lab</span>
+    <span class="hueco"></span>
+    <div class="idiomas" role="group" aria-label="Idioma · Language">
+      <button type="button" data-pon="es" aria-pressed="false">Español</button>
+      <button type="button" data-pon="en" aria-pressed="true">English</button>
+    </div>
+  </div>
+</header>
+
+<main class="ancho">
+  <div class="portada">
+    <h1 lang="en">Optical design for photo and cinema lenses, built in a lens workshop.</h1>
+    <h1 lang="es">Diseño óptico para foto y cine, hecho desde un taller de ópticas.</h1>
+    <p lang="en">Design a lens and watch the rays react. Check an anamorphic in both axes. See what a rehousing or a recementing will do before you touch the glass. It runs on your computer, offline.</p>
+    <p lang="es">Diseña un objetivo viendo reaccionar los rayos. Comprueba un anamórfico en sus dos ejes. Mira lo que hará un rehousing o un recementado antes de tocar el vidrio. Funciona en tu ordenador, sin conexión.</p>
+    <div class="acciones">
+      <a class="boton" href="https://github.com/FixAndFocus/optaller/releases/latest"><span lang="en">Download for Windows or macOS</span><span lang="es">Descargar para Windows o macOS</span></a>
+      <a class="boton claro" href="#que-hace"><span lang="en">What it does</span><span lang="es">Qué hace</span></a>
+    </div>
+    <p class="letra-chica" lang="en">Free for private individuals. Windows (x64) and macOS (Apple Silicon, macOS 14 or later). Interface in English and Spanish.</p>
+    <p class="letra-chica" lang="es">Gratis para particulares. Windows (x64) y macOS (Apple Silicon, macOS 14 o posterior). Interfaz en castellano y en inglés.</p>
+  </div>
+  <figure class="captura grande">
+    <img data-captura="banco" src="img/banco-en.jpg" width="2000" height="1250" alt="The design bench: cross-section with rays, data sheet and surface table">
+  </figure>
+</main>
+
+<div id="que-hace">
+<section>
+  <div class="ancho fila">
+    <div>
+      <div class="numero">01</div>
+      <h2 lang="en">A bench where the rays answer back</h2>
+      <h2 lang="es">Un banco en el que los rayos responden</h2>
+      <p lang="en">Change a radius, a thickness or a glass and the cross-section, the spot and the data sheet follow in about a tenth of a second.</p>
+      <p lang="es">Cambia un radio, un espesor o un vidrio y el corte, la mancha y la ficha lo siguen en una décima de segundo.</p>
+      <ul lang="en">
+        <li><strong>Start</strong> from nine classic layouts, a Zemax or CODE V file, or the table of a patent.</li>
+        <li><strong>Optimize</strong> with least squares, a global search (CMA-ES) or by trying glasses, watching the design change.</li>
+        <li><strong>Data sheet</strong> for photo and cinema: polychromatic MTF with diffraction, T-stop, illumination, format coverage.</li>
+      </ul>
+      <ul lang="es">
+        <li><strong>Empieza</strong> con nueve esquemas clásicos, un fichero de Zemax o CODE V, o la tabla de una patente.</li>
+        <li><strong>Optimiza</strong> con mínimos cuadrados, una búsqueda global (CMA-ES) o probando vidrios, viendo cambiar el diseño.</li>
+        <li><strong>Ficha</strong> de foto y cine: MTF policromática con difracción, T-stop, iluminación y cobertura de formatos.</li>
+      </ul>
+    </div>
+    <figure class="captura"><img data-captura="inicio" src="img/inicio-en.jpg" width="2000" height="1250" loading="lazy" alt="Start screen: start from scratch, open a file or paste a patent table"></figure>
+  </div>
+</section>
+
+<section>
+  <div class="ancho fila al-reves">
+    <div>
+      <div class="numero">02</div>
+      <h2 lang="en">Anamorphics, in their two axes</h2>
+      <h2 lang="es">Anamórficos, en sus dos ejes</h2>
+      <p lang="en">Cylindrical and biconic surfaces are traced as they are, not as an equivalent spherical lens.</p>
+      <p lang="es">Las caras cilíndricas y bicónicas se trazan como son, no como un objetivo esférico equivalente.</p>
+      <ul lang="en">
+        <li><strong>Per axis:</strong> focal length, pupils, third-order aberrations and focus mismatch between horizontal and vertical.</li>
+        <li><strong>Squeeze</strong> against focus distance, and the breathing of each axis.</li>
+        <li><strong>Shims:</strong> which air gap to change to bring the two foci together.</li>
+      </ul>
+      <ul lang="es">
+        <li><strong>Por eje:</strong> focal, pupilas, aberraciones de tercer orden y desajuste de foco entre horizontal y vertical.</li>
+        <li><strong>Squeeze</strong> según la distancia de enfoque, y la respiración de cada eje.</li>
+        <li><strong>Shims:</strong> qué aire tocar para juntar los dos focos.</li>
+      </ul>
+    </div>
+    <figure class="captura"><img data-captura="anamorfico" src="img/anamorfico-en.jpg" width="2000" height="1250" loading="lazy" alt="An anamorphic design with its two-axis data sheet"></figure>
+  </div>
+</section>
+
+<section>
+  <div class="ancho fila">
+    <div>
+      <div class="numero">03</div>
+      <h2 lang="en">What the camera will see</h2>
+      <h2 lang="es">Lo que va a ver la cámara</h2>
+      <p lang="en">The numbers a cinematographer asks about, from the prescription.</p>
+      <p lang="es">Las cifras por las que pregunta un director de fotografía, sacadas de la receta.</p>
+      <ul lang="en">
+        <li><strong>Ghosts</strong> with the coating of each surface, and which surface to coat first.</li>
+        <li><strong>Focus breathing, bokeh</strong> and the focus cam, ready to machine.</li>
+        <li><strong>For VFX:</strong> ST-maps to remove and restore distortion, shading maps, and a preview of a photo through the lens.</li>
+      </ul>
+      <ul lang="es">
+        <li><strong>Fantasmas</strong> con el tratamiento de cada cara, y qué cara tratar primero.</li>
+        <li><strong>Respiración, bokeh</strong> y la leva de enfoque, lista para mecanizar.</li>
+        <li><strong>Para VFX:</strong> ST-maps para quitar y poner la distorsión, mapas de sombreado y la vista previa de una foto a través del objetivo.</li>
+      </ul>
+    </div>
+    <figure class="captura"><img data-captura="vista-previa" src="img/vista-previa-en.jpg" width="2000" height="1068" loading="lazy" alt="Preview of a test chart through the lens: distortion, shading and lateral color"></figure>
+  </div>
+</section>
+
+<section>
+  <div class="ancho fila al-reves">
+    <div>
+      <div class="numero">04</div>
+      <h2 lang="en">Made for the workshop</h2>
+      <h2 lang="es">Pensado para el taller</h2>
+      <p lang="en">The work of repairing, recementing and rehousing lenses, with the uncertainty of what you measured.</p>
+      <p lang="es">El trabajo de reparar, recementar y rehacer la mecánica de una óptica, con la incertidumbre de lo que has medido.</p>
+      <ul lang="en">
+        <li><strong>Rehousing:</strong> fit the prescription to your measurements, sensitivity of each air gap, centering tolerance.</li>
+        <li><strong>Recementing</strong> and “detuning”: which cement reflects least, and what reversing an element does.</li>
+        <li><strong>For the machinist:</strong> ISO 10110 drawings, STEP, DXF, spacers and the athermal behavior of the housing.</li>
+        <li><strong>Lens sets:</strong> T-stop, color cast, distortion and size of each lens against the rest.</li>
+      </ul>
+      <ul lang="es">
+        <li><strong>Rehousing:</strong> ajusta la receta a tus medidas, sensibilidad de cada aire y tolerancia de centrado.</li>
+        <li><strong>Recementado</strong> y «detuning»: qué cemento refleja menos y qué pasa al dar la vuelta a una lente.</li>
+        <li><strong>Para el tornero:</strong> planos ISO 10110, STEP, DXF, separadores y el comportamiento térmico de la carcasa.</li>
+        <li><strong>Juegos de ópticas:</strong> T-stop, tono, distorsión y medidas de cada objetivo frente a los demás.</li>
+      </ul>
+    </div>
+    <figure class="captura"><img data-captura="juego" src="img/juego-en.jpg" width="2000" height="1250" loading="lazy" alt="Matching a lens set: each lens against the median of the set"></figure>
+  </div>
+</section>
+
+<section>
+  <div class="ancho dos">
+    <div>
+      <div class="numero">05</div>
+      <h2 lang="en">It does not trust a single engine</h2>
+      <h2 lang="es">No se fía de un solo motor</h2>
+      <p lang="en">Any design can be traced with <a href="https://github.com/optiland/optiland">Optiland</a>, <a href="https://github.com/mjhoptics/ray-optics">RayOptics</a> and Optaller's own ray tracer; the results are compared with a traffic light and the differences explained.</p>
+      <p lang="es">Cualquier diseño se puede trazar con <a href="https://github.com/optiland/optiland">Optiland</a>, <a href="https://github.com/mjhoptics/ray-optics">RayOptics</a> y el trazador propio de Optaller; los resultados se comparan con un semáforo y las diferencias explicadas.</p>
+      <p lang="en">An unknown glass stops the import with a report instead of being replaced in silence. A single catalog gathers the manufacturers' sheets and checks them against each other.</p>
+      <p lang="es">Un vidrio desconocido detiene la importación con un informe, en vez de cambiarse por otro en silencio. Un único catálogo reúne las hojas de los fabricantes y las contrasta entre sí.</p>
+    </div>
+    <div class="caja">
+      <h3 lang="en">What it is not</h3>
+      <h3 lang="es">Lo que no es</h3>
+      <ul lang="en">
+        <li>It is not open source. The builds are free for private individuals.</li>
+        <li>It has no non-sequential tracing, no physical-optics propagation and no full tolerancing suite: it is not a replacement for OpticStudio or CODE V.</li>
+        <li>What it calculates comes from the prescription. A lens you have not measured is only as good as its patent.</li>
+        <li>The builds are not signed, and there is none for Intel Macs.</li>
+      </ul>
+      <ul lang="es">
+        <li>No es software libre. Los programas compilados son gratis para particulares.</li>
+        <li>No tiene trazado no secuencial, ni propagación de óptica física, ni un módulo completo de tolerancias: no sustituye a OpticStudio ni a CODE V.</li>
+        <li>Lo que calcula sale de la receta. Un objetivo que no has medido vale lo que valga su patente.</li>
+        <li>Los programas no van firmados, y no hay versión para Mac con procesador Intel.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="descargar">
+  <div class="ancho dos">
+    <div>
+      <h2 lang="en">Download</h2>
+      <h2 lang="es">Descargar</h2>
+      <p lang="en">The latest version is in <a href="https://github.com/FixAndFocus/optaller/releases/latest">Releases</a>: a .zip for Windows (x64) and a .dmg for macOS (Apple Silicon, macOS 14 or later).</p>
+      <p lang="es">La última versión está en <a href="https://github.com/FixAndFocus/optaller/releases/latest">Releases</a>: un .zip para Windows (x64) y un .dmg para macOS (Apple Silicon, macOS 14 o posterior).</p>
+      <ul lang="en">
+        <li><strong>Windows:</strong> unzip it anywhere and open <code>optaller\optaller.exe</code>. The first time, choose “More info” → “Run anyway”.</li>
+        <li><strong>macOS:</strong> open the .dmg and drag Optaller to Applications. The first time, allow it in System Settings → Privacy &amp; Security → “Open Anyway”.</li>
+        <li>A browser tab opens with the program. Your designs stay on your computer.</li>
+      </ul>
+      <ul lang="es">
+        <li><strong>Windows:</strong> descomprímelo en cualquier carpeta y abre <code>optaller\optaller.exe</code>. La primera vez, «Más información» → «Ejecutar de todas formas».</li>
+        <li><strong>macOS:</strong> abre el .dmg y arrastra Optaller a Aplicaciones. La primera vez, permítelo en Ajustes del Sistema → Privacidad y seguridad → «Abrir igualmente».</li>
+        <li>Se abre una pestaña del navegador con el programa. Tus diseños se quedan en tu ordenador.</li>
+      </ul>
+      <div class="acciones">
+        <a class="boton" href="https://github.com/FixAndFocus/optaller/releases/latest"><span lang="en">Go to the downloads</span><span lang="es">Ir a las descargas</span></a>
+      </div>
+    </div>
+    <div class="caja">
+      <h3 lang="en">License</h3>
+      <h3 lang="es">Licencia</h3>
+      <p lang="en">Free for private individuals, for their own use. Companies and professional use, including freelancers, need a paid license: ask through <a href="https://github.com/FixAndFocus">github.com/FixAndFocus</a>.</p>
+      <p lang="es">Uso libre para particulares, para sí mismos. Las empresas y el uso profesional, también como autónomo, necesitan una licencia de pago: se pide a través de <a href="https://github.com/FixAndFocus">github.com/FixAndFocus</a>.</p>
+      <p lang="en">The binding text is <a href="https://github.com/FixAndFocus/optaller/blob/main/LICENCIA.md">LICENCIA.md</a>; <a href="https://github.com/FixAndFocus/optaller/blob/main/LICENSE.md">LICENSE.md</a> is its English translation. The libraries inside keep their own licenses, which ship with each build.</p>
+      <p lang="es">El texto que vale es <a href="https://github.com/FixAndFocus/optaller/blob/main/LICENCIA.md">LICENCIA.md</a>; <a href="https://github.com/FixAndFocus/optaller/blob/main/LICENSE.md">LICENSE.md</a> es su traducción al inglés. Las bibliotecas que lleva dentro conservan sus licencias, que van con cada programa.</p>
+    </div>
+  </div>
+</section>
+</div>
+
+<footer>
+  <div class="ancho">
+    <p lang="en">Optaller is made by Fix and Focus Lab, a cinema lens workshop in Madrid. It was called disenooptico until version 0.4.</p>
+    <p lang="es">Optaller lo hace Fix and Focus Lab, un taller de ópticas de cine de Madrid. Hasta la versión 0.4 se llamaba disenooptico.</p>
+    <p lang="en">Built on Optiland and RayOptics, with thanks to the people who maintain them.</p>
+    <p lang="es">Se apoya en Optiland y RayOptics, con agradecimiento a quienes los mantienen.</p>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var raiz = document.documentElement;
+  var titulos = {
+    en: "Optaller · optical design for photo and cinema lenses",
+    es: "Optaller · diseño óptico para foto y cine"
+  };
+  function pon(idioma, recordar) {
+    raiz.setAttribute("data-idioma", idioma);
+    raiz.lang = idioma;
+    document.title = titulos[idioma];
+    document.querySelectorAll(".idiomas button").forEach(function (b) {
+      b.setAttribute("aria-pressed", b.getAttribute("data-pon") === idioma ? "true" : "false");
+    });
+    document.querySelectorAll("img[data-captura]").forEach(function (img) {
+      img.src = "img/" + img.getAttribute("data-captura") + "-" + idioma + ".jpg";
+    });
+    if (recordar) { try { localStorage.setItem("idioma", idioma); } catch (e) {} }
+  }
+  var guardado = null;
+  try { guardado = localStorage.getItem("idioma"); } catch (e) {}
+  pon(guardado || ((navigator.language || "en").toLowerCase().indexOf("es") === 0 ? "es" : "en"), false);
+  document.querySelectorAll(".idiomas button").forEach(function (b) {
+    b.addEventListener("click", function () { pon(b.getAttribute("data-pon"), true); });
+  });
+})();
+</script>
+</body>
+</html>
