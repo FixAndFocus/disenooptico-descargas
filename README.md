@@ -22,7 +22,8 @@ castellano o en inglés.
 - La MTF medida en el banco, comparada con la de diseño: pegada, o abriendo los ficheros de Trioptics
   ImageMaster o de MTF Mapper.
 - Medir la MTF en la foto de un borde inclinado (ISO 12233), con avisos de lo que falsea la medida;
-  también sobre un DNG sin comprimir, sin revelar (los de una Raspberry Pi).
+  también sobre el bruto de la cámara sin revelar (DNG, ARW, CR3, NEF…).
+- Barrido de foco: de una serie de fotos, el mejor foco (el error de tiraje) y su margen.
 - Hoja de encargo: lo que pide el cliente, comprobado contra el diseño, con lista de entrega.
 - Paleta de órdenes con Ctrl+K, y un servidor MCP para manejarlo desde Claude.
 
@@ -138,7 +139,8 @@ the browser, in Spanish or English (Settings → “Idioma · Language”).
 - Measured MTF against the design MTF (typed, or from Trioptics ImageMaster and MTF Mapper files); a
   requirements sheet checked against the design.
 - MTF measured from the photo of a slanted edge (ISO 12233), with warnings about what distorts it; also on
-  an undeveloped, uncompressed DNG (those from a Raspberry Pi).
+  the undeveloped camera raw file (DNG, ARW, CR3, NEF…). Focus sweep: best focus and its margin from a
+  series of photos.
 - Command palette (Ctrl+K), and an MCP server (`optaller mcp`) to drive it from Claude.
 
 **Download** the latest build from [Releases](../../releases/latest): on Windows (x64), unzip it
