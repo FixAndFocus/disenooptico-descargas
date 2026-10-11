@@ -15,10 +15,12 @@ castellano o en inglés.
 - Fantasmas con el tratamiento de cada cara, bokeh, enfoque, respiración y leva de enfoque.
 - Rehousing y mecánica: planos ISO 10110, STEP, DXF y atermalización de la carcasa.
 - Recementado: qué cemento conviene en cada cara pegada, y el antes y el después.
-- «Detuning»: dar la vuelta a una lente y ver lo que cambia frente a una referencia.
+- «Detuning»: dar la vuelta a una lente, abrir un aire o quitar un tratamiento, y ver lo que cambia
+  (luz, fantasmas, bokeh y nitidez) frente a una referencia.
 - Mapas de distorsión y de sombreado para VFX, y vista previa sobre una foto.
 - Emparejar un juego de ópticas: T-stop, tono, distorsión y medidas.
-- La MTF medida en el banco, comparada con la de diseño.
+- La MTF medida en el banco, comparada con la de diseño: pegada, o abriendo los ficheros de Trioptics
+  ImageMaster o de MTF Mapper.
 - Hoja de encargo: lo que pide el cliente, comprobado contra el diseño, con lista de entrega.
 - Paleta de órdenes con Ctrl+K, y un servidor MCP para manejarlo desde Claude.
 
@@ -131,7 +133,8 @@ the browser, in Spanish or English (Settings → “Idioma · Language”).
 - Ghosts with the coating of each surface, bokeh, focus breathing and the focus cam.
 - Rehousing and mechanics: ISO 10110 drawings, STEP, DXF, athermalization; recementing,
   “detuning”, lens-set matching; distortion and shading maps for VFX.
-- Measured MTF against the design MTF; a requirements sheet checked against the design.
+- Measured MTF against the design MTF (typed, or from Trioptics ImageMaster and MTF Mapper files); a
+  requirements sheet checked against the design.
 - Command palette (Ctrl+K), and an MCP server (`optaller mcp`) to drive it from Claude.
 
 **Download** the latest build from [Releases](../../releases/latest): on Windows (x64), unzip it
