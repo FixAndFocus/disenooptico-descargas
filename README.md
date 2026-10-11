@@ -23,7 +23,9 @@ castellano o en inglés.
   ImageMaster o de MTF Mapper.
 - Medir la MTF en la foto de un borde inclinado (ISO 12233), con avisos de lo que falsea la medida;
   también sobre el bruto de la cámara sin revelar (DNG, ARW, CR3, NEF…).
-- Barrido de foco: de una serie de fotos, el mejor foco (el error de tiraje) y su margen.
+- Barrido de foco: de una serie de fotos, el mejor foco (el error de tiraje) y su margen. Y con varios
+  barridos (tangencial y sagital, eje y borde, un lado y otro), el astigmatismo, la curvatura de campo y
+  la inclinación del plano de imagen, medidos.
 - Hoja de encargo: lo que pide el cliente, comprobado contra el diseño, con lista de entrega.
 - Paleta de órdenes con Ctrl+K, y un servidor MCP para manejarlo desde Claude.
 
@@ -140,7 +142,7 @@ the browser, in Spanish or English (Settings → “Idioma · Language”).
   requirements sheet checked against the design.
 - MTF measured from the photo of a slanted edge (ISO 12233), with warnings about what distorts it; also on
   the undeveloped camera raw file (DNG, ARW, CR3, NEF…). Focus sweep: best focus and its margin from a
-  series of photos.
+  series of photos; with several sweeps, measured astigmatism, field curvature and image-plane tilt.
 - Command palette (Ctrl+K), and an MCP server (`optaller mcp`) to drive it from Claude.
 
 **Download** the latest build from [Releases](../../releases/latest): on Windows (x64), unzip it
