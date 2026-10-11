@@ -21,7 +21,8 @@ castellano o en inglés.
 - Emparejar un juego de ópticas: T-stop, tono, distorsión y medidas.
 - La MTF medida en el banco, comparada con la de diseño: pegada, o abriendo los ficheros de Trioptics
   ImageMaster o de MTF Mapper.
-- Medir la MTF en la foto de un borde inclinado (ISO 12233), con avisos de lo que falsea la medida.
+- Medir la MTF en la foto de un borde inclinado (ISO 12233), con avisos de lo que falsea la medida;
+  también sobre un DNG sin comprimir, sin revelar (los de una Raspberry Pi).
 - Hoja de encargo: lo que pide el cliente, comprobado contra el diseño, con lista de entrega.
 - Paleta de órdenes con Ctrl+K, y un servidor MCP para manejarlo desde Claude.
 
@@ -136,7 +137,8 @@ the browser, in Spanish or English (Settings → “Idioma · Language”).
   “detuning”, lens-set matching; distortion and shading maps for VFX.
 - Measured MTF against the design MTF (typed, or from Trioptics ImageMaster and MTF Mapper files); a
   requirements sheet checked against the design.
-- MTF measured from the photo of a slanted edge (ISO 12233), with warnings about what distorts it.
+- MTF measured from the photo of a slanted edge (ISO 12233), with warnings about what distorts it; also on
+  an undeveloped, uncompressed DNG (those from a Raspberry Pi).
 - Command palette (Ctrl+K), and an MCP server (`optaller mcp`) to drive it from Claude.
 
 **Download** the latest build from [Releases](../../releases/latest): on Windows (x64), unzip it
