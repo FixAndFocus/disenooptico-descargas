@@ -186,14 +186,14 @@ footer p { color: inherit; margin: 0 0 6px; }
       <p lang="en">The numbers a cinematographer asks about, from the prescription.</p>
       <p lang="es">Las cifras por las que pregunta un director de fotografía, sacadas de la receta.</p>
       <ul lang="en">
-        <li><strong>Ghosts</strong> with the coating of each surface, and which surface to coat first.</li>
+        <li><strong>Ghosts</strong> with the coating of each surface (also as real layer stacks, with the color of each reflection), and which surface to coat first.</li>
         <li><strong>Focus breathing, bokeh</strong> and the focus cam, ready to machine.</li>
-        <li><strong>For VFX:</strong> ST-maps to remove and restore distortion, shading maps, and a preview of a photo through the lens.</li>
+        <li><strong>For VFX:</strong> ST-maps to remove and restore distortion, shading maps, a preview of a photo through the lens, and exports for pbrt, lensfun and OpenTrackIO.</li>
       </ul>
       <ul lang="es">
-        <li><strong>Fantasmas</strong> con el tratamiento de cada cara, y qué cara tratar primero.</li>
+        <li><strong>Fantasmas</strong> con el tratamiento de cada cara (también por capas, con el color de su reflejo), y qué cara tratar primero.</li>
         <li><strong>Respiración, bokeh</strong> y la leva de enfoque, lista para mecanizar.</li>
-        <li><strong>Para VFX:</strong> ST-maps para quitar y poner la distorsión, mapas de sombreado y la vista previa de una foto a través del objetivo.</li>
+        <li><strong>Para VFX:</strong> ST-maps para quitar y poner la distorsión, mapas de sombreado, la vista previa de una foto a través del objetivo, y la receta o el perfil para pbrt, lensfun y OpenTrackIO.</li>
       </ul>
     </div>
     <figure class="captura"><img data-captura="vista-previa" src="img/vista-previa-en.jpg" width="2000" height="1068" loading="lazy" alt="Preview of a test chart through the lens: distortion, shading and lateral color"></figure>
@@ -211,18 +211,20 @@ footer p { color: inherit; margin: 0 0 6px; }
       <ul lang="en">
         <li><strong>Rehousing:</strong> fit the prescription to your measurements, sensitivity of each air gap, centering tolerance.</li>
         <li><strong>Recementing</strong> and “detuning”: which cement reflects least, and what reversing an element, opening an air gap or stripping a coating does to light, ghosts and bokeh.</li>
-        <li><strong>For the machinist:</strong> ISO 10110 drawings, STEP, DXF, spacers and the athermal behavior of the housing.</li>
+        <li><strong>For the machinist:</strong> ISO 10110 drawings, STEP (with a starting mount: spacers, rings and a barrel), DXF, spacers and the athermal behavior of the housing.</li>
         <li><strong>Lens sets:</strong> T-stop, color cast, distortion and size of each lens against the rest.</li>
         <li><strong>From the bench to the client:</strong> measured MTF against the design MTF (also from Trioptics ImageMaster and MTF Mapper files), and a requirements sheet checked against the design, with its delivery checklist.</li>
-        <li><strong>Measure it:</strong> MTF from the photo of a slanted edge (ISO 12233), also on the undeveloped camera raw file (DNG, ARW, CR3, NEF…), with warnings about what distorts the measurement; and a focus sweep that finds best focus from a series of photos, with astigmatism, field curvature and image-plane tilt measured by comparing sweeps.</li>
+        <li><strong>Measure it:</strong> MTF from the photo of a slanted edge (ISO 12233), also on the undeveloped camera raw file (DNG, ARW, CR3, NEF…), with warnings about what distorts the measurement; and a focus sweep that finds best focus from a series of photos, with astigmatism, field curvature and image-plane tilt measured by comparing sweeps. Chart edges are found automatically.</li>
+        <li><strong>The wavefront</strong> as Zernike polynomials against the design: from an interferometer map (Zygo <code>.dat</code>) or, without an interferometer, from the photo of a defocused point source (checked against computed spots, not yet with real photos).</li>
       </ul>
       <ul lang="es">
         <li><strong>Rehousing:</strong> ajusta la receta a tus medidas, sensibilidad de cada aire y tolerancia de centrado.</li>
         <li><strong>Recementado</strong> y «detuning»: qué cemento refleja menos y qué les pasa a la luz, los fantasmas y el bokeh al dar la vuelta a una lente, abrir un aire o quitar un tratamiento.</li>
-        <li><strong>Para el tornero:</strong> planos ISO 10110, STEP, DXF, separadores y el comportamiento térmico de la carcasa.</li>
+        <li><strong>Para el tornero:</strong> planos ISO 10110, STEP (con una montura de partida: separadores, anillos y barrilete), DXF, separadores y el comportamiento térmico de la carcasa.</li>
         <li><strong>Juegos de ópticas:</strong> T-stop, tono, distorsión y medidas de cada objetivo frente a los demás.</li>
         <li><strong>Del banco al cliente:</strong> la MTF medida frente a la de diseño (también desde ficheros de Trioptics ImageMaster y de MTF Mapper), y la hoja de encargo comprobada contra el diseño, con su lista de entrega.</li>
-        <li><strong>Medirlo:</strong> la MTF en la foto de un borde inclinado (ISO 12233), también sobre el bruto de la cámara sin revelar (DNG, ARW, CR3, NEF…), con avisos de lo que falsea la medida; y el barrido de foco, que saca el mejor foco de una serie de fotos y, comparando barridos, el astigmatismo, la curvatura de campo y la inclinación del plano de imagen.</li>
+        <li><strong>Medirlo:</strong> la MTF en la foto de un borde inclinado (ISO 12233), también sobre el bruto de la cámara sin revelar (DNG, ARW, CR3, NEF…), con avisos de lo que falsea la medida; y el barrido de foco, que saca el mejor foco de una serie de fotos y, comparando barridos, el astigmatismo, la curvatura de campo y la inclinación del plano de imagen. Los bordes de una carta se encuentran solos.</li>
+        <li><strong>El frente de onda</strong> en polinomios de Zernike, comparado con el del diseño: del mapa de un interferómetro (el <code>.dat</code> de Zygo) o, sin interferómetro, de la foto de un punto de luz desenfocado (comprobado con manchas calculadas, no aún con fotos de verdad).</li>
       </ul>
     </div>
     <figure class="captura"><img data-captura="juego" src="img/juego-en.jpg" width="2000" height="1250" loading="lazy" alt="Matching a lens set: each lens against the median of the set"></figure>

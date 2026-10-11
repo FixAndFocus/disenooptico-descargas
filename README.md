@@ -12,12 +12,15 @@ castellano o en inglés.
 - Anamórficos en sus dos ejes.
 - Ficha de foto y cine: MTF, T-stop, iluminación y cobertura de formatos.
 - Validación cruzada entre motores (Optiland, RayOptics y un trazador propio).
-- Fantasmas con el tratamiento de cada cara, bokeh, enfoque, respiración y leva de enfoque.
-- Rehousing y mecánica: planos ISO 10110, STEP, DXF y atermalización de la carcasa.
+- Fantasmas con el tratamiento de cada cara (también por capas, con el color de su reflejo), bokeh,
+  enfoque, respiración y leva de enfoque.
+- Rehousing y mecánica: planos ISO 10110, STEP (con una montura de partida: separadores, anillos y
+  barrilete), DXF y atermalización de la carcasa.
 - Recementado: qué cemento conviene en cada cara pegada, y el antes y el después.
 - «Detuning»: dar la vuelta a una lente, abrir un aire o quitar un tratamiento, y ver lo que cambia
   (luz, fantasmas, bokeh y nitidez) frente a una referencia.
-- Mapas de distorsión y de sombreado para VFX, y vista previa sobre una foto.
+- Mapas de distorsión y de sombreado para VFX, vista previa sobre una foto, y la receta o el perfil
+  del objetivo para pbrt, lensfun y OpenTrackIO.
 - Emparejar un juego de ópticas: T-stop, tono, distorsión y medidas.
 - La MTF medida en el banco, comparada con la de diseño: pegada, o abriendo los ficheros de Trioptics
   ImageMaster o de MTF Mapper.
@@ -25,7 +28,11 @@ castellano o en inglés.
   también sobre el bruto de la cámara sin revelar (DNG, ARW, CR3, NEF…).
 - Barrido de foco: de una serie de fotos, el mejor foco (el error de tiraje) y su margen. Y con varios
   barridos (tangencial y sagital, eje y borde, un lado y otro), el astigmatismo, la curvatura de campo y
-  la inclinación del plano de imagen, medidos.
+  la inclinación del plano de imagen, medidos. Los bordes de una carta se encuentran solos, y el barrido
+  puede hacerse solo con una platina GRBL y la cámara de una Raspberry Pi (sin probar aún con aparatos).
+- El frente de onda en polinomios de Zernike, comparado con el del diseño: del mapa de un
+  interferómetro (el `.dat` de Zygo) o, sin interferómetro, de la foto de un punto de luz desenfocado
+  (comprobado con manchas calculadas, no aún con fotos de verdad).
 - Hoja de encargo: lo que pide el cliente, comprobado contra el diseño, con lista de entrega.
 - Paleta de órdenes con Ctrl+K, y un servidor MCP para manejarlo desde Claude.
 
@@ -51,7 +58,8 @@ versiones para ellos.
 
 - **Windows**: descomprime el .zip en cualquier carpeta y abre `optaller\optaller.exe`.
   Se abre una pestaña del navegador con el programa. Se queda una consola minimizada:
-  cerrarla cierra el programa.
+  cerrarla cierra el programa. En Ajustes, «Abrir en una ventana propia» hace que la próxima vez
+  se abra en su ventana en vez de en el navegador.
 - **macOS**: abre el .dmg y arrastra `Optaller` a Aplicaciones. Para cerrarlo: Ajustes
   (el icono de arriba a la derecha) → «Cerrar el programa»; o cierra todas sus pestañas y
   se cierra solo a los dos minutos.
@@ -135,14 +143,21 @@ the browser, in Spanish or English (Settings → “Idioma · Language”).
 - Design from scratch or optimize, watching the rays react. Anamorphics in their two axes.
 - Photo and cinema data sheet: MTF, T-stop, illumination, format coverage.
 - Cross-validation between engines (Optiland, RayOptics and an in-house ray tracer).
-- Ghosts with the coating of each surface, bokeh, focus breathing and the focus cam.
-- Rehousing and mechanics: ISO 10110 drawings, STEP, DXF, athermalization; recementing,
-  “detuning”, lens-set matching; distortion and shading maps for VFX.
+- Ghosts with the coating of each surface (also as real layer stacks, with the color of each
+  reflection), bokeh, focus breathing and the focus cam.
+- Rehousing and mechanics: ISO 10110 drawings, STEP (with a starting mount: spacers, rings and a
+  barrel), DXF, athermalization; recementing, “detuning”, lens-set matching; distortion and shading
+  maps for VFX, and exports for pbrt, lensfun and OpenTrackIO.
 - Measured MTF against the design MTF (typed, or from Trioptics ImageMaster and MTF Mapper files); a
   requirements sheet checked against the design.
 - MTF measured from the photo of a slanted edge (ISO 12233), with warnings about what distorts it; also on
   the undeveloped camera raw file (DNG, ARW, CR3, NEF…). Focus sweep: best focus and its margin from a
   series of photos; with several sweeps, measured astigmatism, field curvature and image-plane tilt.
+  Chart edges are found automatically, and the sweep can run by itself with a GRBL stage and a
+  Raspberry Pi camera (not yet tested with real hardware).
+- The wavefront as Zernike polynomials against the design: from an interferometer map (Zygo `.dat`)
+  or, without an interferometer, from the photo of a defocused point source (checked against computed
+  spots, not yet with real photos).
 - Command palette (Ctrl+K), and an MCP server (`optaller mcp`) to drive it from Claude.
 
 **Download** the latest build from [Releases](../../releases/latest): on Windows (x64), unzip it
