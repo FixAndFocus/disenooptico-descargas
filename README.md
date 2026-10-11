@@ -18,6 +18,9 @@ castellano o en inglés.
 - «Detuning»: dar la vuelta a una lente y ver lo que cambia frente a una referencia.
 - Mapas de distorsión y de sombreado para VFX, y vista previa sobre una foto.
 - Emparejar un juego de ópticas: T-stop, tono, distorsión y medidas.
+- La MTF medida en el banco, comparada con la de diseño.
+- Hoja de encargo: lo que pide el cliente, comprobado contra el diseño, con lista de entrega.
+- Paleta de órdenes con Ctrl+K, y un servidor MCP para manejarlo desde Claude.
 
 Este repositorio tiene los programas ya compilados, la licencia, la web y estas instrucciones.
 El código no es público. Hasta la versión 0.4 el programa se llamaba disenooptico.
@@ -73,7 +76,10 @@ carpetas y conserva todo: ajustes, borrador, cajón, historial y diseños.
 
 El diseño «desde lentes planas» con PyTorch, y DeepLens en la validación cruzada: ahí
 sale como «no está instalado en esta versión». La validación sigue con Optiland, RayOptics
-y el trazador propio. Lo que se exporta a ficheros (planos, CSV, informes) sale en castellano.
+y el trazador propio.
+
+Lo que se exporta (planos, CSV, lista de entrega, mapas para VFX, informes) sale en el idioma
+de la interfaz; los textos de los DXF, en castellano.
 
 ### Sin interfaz, por lotes
 
@@ -84,6 +90,14 @@ pide, planos, STEP, .zmx y validación. Con `--juego`, además, las compara como
 ```
 optaller\optaller.exe lote CARPETA --todo
 ```
+
+### Desde Claude (servidor MCP)
+
+`optaller mcp` deja manejar el programa desde Claude: crear un diseño de partida, abrir una
+receta, sacar su ficha, optimizarla, validarla, exportarla, comprobar un encargo y comparar un
+juego de ópticas. Para darlo de alta, la orden es la ruta del ejecutable
+(`…\optaller\optaller.exe` en Windows, `/Applications/Optaller.app/Contents/MacOS/optaller` en
+macOS) con el argumento `mcp`.
 
 ## Licencia
 
@@ -117,12 +131,15 @@ the browser, in Spanish or English (Settings → “Idioma · Language”).
 - Ghosts with the coating of each surface, bokeh, focus breathing and the focus cam.
 - Rehousing and mechanics: ISO 10110 drawings, STEP, DXF, athermalization; recementing,
   “detuning”, lens-set matching; distortion and shading maps for VFX.
+- Measured MTF against the design MTF; a requirements sheet checked against the design.
+- Command palette (Ctrl+K), and an MCP server (`optaller mcp`) to drive it from Claude.
 
 **Download** the latest build from [Releases](../../releases/latest): on Windows (x64), unzip it
 and open `optaller\optaller.exe`; on macOS (Apple Silicon, macOS 14 or later), open the .dmg and
 drag Optaller to Applications. The builds are not signed, so the system warns the first time:
 on Windows, “More info” → “Run anyway”; on macOS, System Settings → Privacy & Security → “Open
-Anyway”. Exported files (drawings, CSV, reports) are written in Spanish.
+Anyway”. Exported files (drawings, CSV, checklists, VFX maps, reports) follow the interface
+language.
 
 **Free for private individuals for personal use; companies and professional use (including
 self-employed) need a paid licence**: ask through
