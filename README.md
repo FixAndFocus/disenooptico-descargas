@@ -18,9 +18,11 @@ en su propia ventana), en castellano o en inglés.
   barrilete), DXF y atermalización de la carcasa.
 - Recementado: qué cemento conviene en cada cara pegada, y el antes y el después.
 - «Detuning»: dar la vuelta a una lente, abrir un aire o quitar un tratamiento, y ver lo que cambia
-  (luz, fantasmas, bokeh y nitidez) frente a una referencia.
-- Mapas de distorsión y de sombreado para VFX, vista previa sobre una foto, y la receta o el perfil
-  del objetivo para pbrt, lensfun y OpenTrackIO.
+  (luz, fantasmas, bokeh y nitidez) frente a una referencia. Y descentrar o inclinar una lente, para
+  ver la coma, las manchas a cada lado del campo y el plano de imagen inclinado que daría.
+- Mapas de distorsión y de sombreado para VFX, vista previa sobre una foto (con su distorsión, su
+  sombreado, su color lateral y la nitidez de cada zona), y la receta o el perfil del objetivo para
+  pbrt, lensfun y OpenTrackIO.
 - Emparejar un juego de ópticas: T-stop, tono, distorsión y medidas.
 - La MTF medida en el banco, comparada con la de diseño: pegada, o abriendo los ficheros de Trioptics
   ImageMaster o de MTF Mapper.
@@ -28,11 +30,13 @@ en su propia ventana), en castellano o en inglés.
   también sobre el bruto de la cámara sin revelar (DNG, ARW, CR3, NEF…).
 - Barrido de foco: de una serie de fotos, el mejor foco (el error de tiraje) y su margen. Y con varios
   barridos (tangencial y sagital, eje y borde, un lado y otro), el astigmatismo, la curvatura de campo y
-  la inclinación del plano de imagen, medidos. Los bordes de una carta se encuentran solos, y el barrido
-  puede hacerse solo con una platina GRBL y la cámara de una Raspberry Pi (sin probar aún con aparatos).
+  la inclinación del plano de imagen, medidos, al lado de los del diseño. Los bordes de una carta se
+  encuentran solos, y el barrido puede hacerse solo con una platina GRBL y la cámara de una Raspberry Pi
+  (sin probar aún con aparatos).
 - El frente de onda en polinomios de Zernike, comparado con el del diseño: del mapa de un
-  interferómetro (el `.dat` de Zygo) o, sin interferómetro, de la foto de un punto de luz desenfocado
-  (comprobado con manchas calculadas, no aún con fotos de verdad).
+  interferómetro (el `.dat` de Zygo) o, sin interferómetro, de la foto de un punto de luz desenfocado,
+  o de dos, una a cada lado del foco (comprobado con manchas calculadas, no aún con fotos de verdad).
+  De la coma medida en el eje sale cuánto habría que mover cada elemento para darla.
 - Hoja de encargo: lo que pide el cliente, comprobado contra el diseño, con lista de entrega.
 - Paleta de órdenes con Ctrl+K, y un servidor MCP para manejarlo desde Claude.
 
