@@ -16,13 +16,16 @@ en su propia ventana), en castellano o en inglés.
   enfoque, respiración y leva de enfoque.
 - Rehousing y mecánica: planos ISO 10110, STEP (con una montura de partida: separadores, anillos y
   barrilete), DXF y atermalización de la carcasa.
+- Tolerancias por celda: con lo que das por bueno al montar, cuántos montajes cumplen solo con el shim
+  de foco y cuántos centrando una celda, cuál conviene centrar y en qué orden.
 - Recementado: qué cemento conviene en cada cara pegada, y el antes y el después.
 - «Detuning»: dar la vuelta a una lente, abrir un aire o quitar un tratamiento, y ver lo que cambia
-  (luz, fantasmas, bokeh y nitidez) frente a una referencia. Y descentrar o inclinar una lente, para
-  ver la coma, las manchas a cada lado del campo y el plano de imagen inclinado que daría.
+  (luz, fantasmas, bokeh y nitidez) frente a una referencia. Y descentrar o inclinar una lente
+  (también en anamórficos), para ver la coma, las manchas a cada lado del campo, el plano de imagen
+  inclinado que daría y la luz que corta el canto de las lentes.
 - Mapas de distorsión y de sombreado para VFX, vista previa sobre una foto (con su distorsión, su
-  sombreado, su color lateral y la nitidez de cada zona), y la receta o el perfil del objetivo para
-  pbrt, lensfun y OpenTrackIO.
+  sombreado, su color lateral y la nitidez de cada zona) y recortes al 100 % de un sensor de verdad,
+  con la difracción; y la receta o el perfil del objetivo para pbrt, lensfun y OpenTrackIO.
 - Emparejar un juego de ópticas: T-stop, tono, distorsión y medidas.
 - La MTF medida en el banco, comparada con la de diseño: pegada, o abriendo los ficheros de Trioptics
   ImageMaster o de MTF Mapper.
