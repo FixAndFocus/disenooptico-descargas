@@ -4,12 +4,14 @@ Diseño y análisis óptico para fotografía y cine, hecho desde un taller de ó
 Lab, Madrid). Funciona en tu ordenador, sin conexión, con la interfaz en el navegador (en macOS,
 en su propia ventana), en castellano o en inglés.
 
-**[Web del proyecto](https://fixandfocus.github.io/optaller/)** · **[Descargar](../../releases/latest)** · [English](#in-english)
+**[Web del proyecto](https://fixandfocus.github.io/optaller/)** · **[Descargar](../../releases/latest)** · **[Manual de uso (PDF)](manual/Optaller-manual-es.pdf)** · [English](#in-english)
 
 [![El banco de diseño de Optaller: corte con rayos, ficha y tabla de superficies](docs/img/banco-es.jpg)](https://fixandfocus.github.io/optaller/)
 
-- Diseñar desde cero u optimizar, viendo reaccionar los rayos.
-- Anamórficos en sus dos ejes.
+- Diseñar desde cero (de un esquema clásico, de la tabla de una patente o de una hoja en blanco) u
+  optimizar, viendo reaccionar los rayos.
+- Anamórficos en sus dos ejes; la tabla de un adaptador de cilindros se pega delante de un objetivo,
+  y dice qué aire hay que mover para que sea afocal.
 - Ficha de foto y cine: MTF, diagrama de manchas, T-stop, iluminación y cobertura de formatos.
 - Validación cruzada entre motores (Optiland, RayOptics y un trazador propio).
 - Fantasmas con el tratamiento de cada cara (también por capas, con el color de su reflejo), bokeh,
@@ -30,7 +32,9 @@ en su propia ventana), en castellano o en inglés.
 - La MTF medida en el banco, comparada con la de diseño: pegada, o abriendo los ficheros de Trioptics
   ImageMaster o de MTF Mapper.
 - Medir la MTF en la foto de un borde inclinado (ISO 12233), con avisos de lo que falsea la medida;
-  también sobre el bruto de la cámara sin revelar (DNG, ARW, CR3, NEF…).
+  también sobre el bruto de la cámara sin revelar (DNG, ARW, CR3, NEF…) y el FITS de un sensor suelto.
+  Con la cámara conectada (una Sony α7R II o α7 III con su programa, un sensor USB), cada foto nueva
+  se mide sola; y lo medido sale en un informe en PDF para entregar con el objetivo.
 - Barrido de foco: de una serie de fotos, el mejor foco (el error de tiraje) y su margen. Y con varios
   barridos (tangencial y sagital, eje y borde, un lado y otro), el astigmatismo, la curvatura de campo y
   la inclinación del plano de imagen, medidos, al lado de los del diseño. Los bordes de una carta se
@@ -144,11 +148,12 @@ Optaller is optical design and analysis software for photo and cinema lenses, ma
 workshop (Fix and Focus Lab, Madrid). It runs on your computer, offline, with its interface in
 the browser (on macOS, in its own window), in Spanish or English (Settings → “Idioma · Language”).
 
-**[Project page](https://fixandfocus.github.io/optaller/)** · **[Download](../../releases/latest)**
+**[Project page](https://fixandfocus.github.io/optaller/)** · **[Download](../../releases/latest)** · **[User manual (PDF)](manual/Optaller-manual-en.pdf)**
 
 [![The Optaller design bench: cross-section with rays, data sheet and surface table](docs/img/banco-en.jpg)](https://fixandfocus.github.io/optaller/)
 
-- Design from scratch or optimize, watching the rays react. Anamorphics in their two axes.
+- Design from scratch (from a classic layout, a patent table or a blank sheet) or optimize, watching the
+  rays react. Anamorphics in their two axes; a cylinder adapter's table can be pasted in front of a lens.
 - Photo and cinema data sheet: MTF, spot diagrams, T-stop, illumination, format coverage.
 - Cross-validation between engines (Optiland, RayOptics and an in-house ray tracer).
 - Ghosts with the coating of each surface (also as real layer stacks, with the color of each
@@ -159,7 +164,9 @@ the browser (on macOS, in its own window), in Spanish or English (Settings → �
 - Measured MTF against the design MTF (typed, or from Trioptics ImageMaster and MTF Mapper files); a
   requirements sheet checked against the design.
 - MTF measured from the photo of a slanted edge (ISO 12233), with warnings about what distorts it; also on
-  the undeveloped camera raw file (DNG, ARW, CR3, NEF…). Focus sweep: best focus and its margin from a
+  the undeveloped camera raw file (DNG, ARW, CR3, NEF…) and a bare sensor's FITS; with a tethered camera
+  (a Sony α7R II or α7 III, a USB sensor) each new photo is measured by itself, and a PDF report gathers
+  what was measured. Focus sweep: best focus and its margin from a
   series of photos; with several sweeps, measured astigmatism, field curvature and image-plane tilt.
   Chart edges are found automatically, and the sweep can run by itself with a GRBL stage and a
   Raspberry Pi camera (not yet tested with real hardware).

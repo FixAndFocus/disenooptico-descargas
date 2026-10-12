@@ -214,7 +214,7 @@ footer p { color: inherit; margin: 0 0 6px; }
         <li><strong>For the machinist:</strong> ISO 10110 drawings, STEP (with a starting mount: spacers, rings and a barrel), DXF, spacers and the athermal behavior of the housing.</li>
         <li><strong>Lens sets:</strong> T-stop, color cast, distortion and size of each lens against the rest.</li>
         <li><strong>From the bench to the client:</strong> measured MTF against the design MTF (also from Trioptics ImageMaster and MTF Mapper files), and a requirements sheet checked against the design, with its delivery checklist.</li>
-        <li><strong>Measure it:</strong> MTF from the photo of a slanted edge (ISO 12233), also on the undeveloped camera raw file (DNG, ARW, CR3, NEF…), with warnings about what distorts the measurement; and a focus sweep that finds best focus from a series of photos, with astigmatism, field curvature and image-plane tilt measured by comparing sweeps. Chart edges are found automatically.</li>
+        <li><strong>Measure it:</strong> MTF from the photo of a slanted edge (ISO 12233), also on the undeveloped camera raw file (DNG, ARW, CR3, NEF…) or a bare sensor's FITS, with warnings about what distorts the measurement; with a tethered camera each new photo is measured by itself, and a PDF report gathers the results; and a focus sweep that finds best focus from a series of photos, with astigmatism, field curvature and image-plane tilt measured by comparing sweeps. Chart edges are found automatically.</li>
         <li><strong>The wavefront</strong> as Zernike polynomials against the design: from an interferometer map (Zygo <code>.dat</code>) or, without an interferometer, from the photo of a defocused point source, or two, one on each side of focus (checked against computed spots, not yet with real photos). From the coma measured on axis: how far each element would have to move to give it.</li>
       </ul>
       <ul lang="es">
@@ -223,7 +223,7 @@ footer p { color: inherit; margin: 0 0 6px; }
         <li><strong>Para el tornero:</strong> planos ISO 10110, STEP (con una montura de partida: separadores, anillos y barrilete), DXF, separadores y el comportamiento térmico de la carcasa.</li>
         <li><strong>Juegos de ópticas:</strong> T-stop, tono, distorsión y medidas de cada objetivo frente a los demás.</li>
         <li><strong>Del banco al cliente:</strong> la MTF medida frente a la de diseño (también desde ficheros de Trioptics ImageMaster y de MTF Mapper), y la hoja de encargo comprobada contra el diseño, con su lista de entrega.</li>
-        <li><strong>Medirlo:</strong> la MTF en la foto de un borde inclinado (ISO 12233), también sobre el bruto de la cámara sin revelar (DNG, ARW, CR3, NEF…), con avisos de lo que falsea la medida; y el barrido de foco, que saca el mejor foco de una serie de fotos y, comparando barridos, el astigmatismo, la curvatura de campo y la inclinación del plano de imagen. Los bordes de una carta se encuentran solos.</li>
+        <li><strong>Medirlo:</strong> la MTF en la foto de un borde inclinado (ISO 12233), también sobre el bruto de la cámara sin revelar (DNG, ARW, CR3, NEF…) o el FITS de un sensor suelto, con avisos de lo que falsea la medida; con la cámara conectada cada foto nueva se mide sola, y lo medido sale en un informe en PDF; y el barrido de foco, que saca el mejor foco de una serie de fotos y, comparando barridos, el astigmatismo, la curvatura de campo y la inclinación del plano de imagen. Los bordes de una carta se encuentran solos.</li>
         <li><strong>El frente de onda</strong> en polinomios de Zernike, comparado con el del diseño: del mapa de un interferómetro (el <code>.dat</code> de Zygo) o, sin interferómetro, de la foto de un punto de luz desenfocado, o de dos, una a cada lado del foco (comprobado con manchas calculadas, no aún con fotos de verdad). De la coma medida en el eje sale cuánto habría que mover cada elemento para darla.</li>
       </ul>
     </div>
@@ -268,6 +268,8 @@ footer p { color: inherit; margin: 0 0 6px; }
       <h2 lang="es">Descargar</h2>
       <p lang="en">The latest version is in <a href="https://github.com/FixAndFocus/optaller/releases/latest">Releases</a>: a .zip for Windows (x64) and a .dmg for macOS (Apple Silicon, macOS 14 or later).</p>
       <p lang="es">La última versión está en <a href="https://github.com/FixAndFocus/optaller/releases/latest">Releases</a>: un .zip para Windows (x64) y un .dmg para macOS (Apple Silicon, macOS 14 o posterior).</p>
+      <p lang="en">The <a href="https://github.com/FixAndFocus/optaller/blob/main/manual/Optaller-manual-en.pdf">user manual</a> (PDF) walks through the whole program.</p>
+      <p lang="es">El <a href="https://github.com/FixAndFocus/optaller/blob/main/manual/Optaller-manual-es.pdf">manual de uso</a> (PDF) recorre el programa entero.</p>
       <ul lang="en">
         <li><strong>Windows:</strong> unzip it anywhere and open <code>optaller\optaller.exe</code>. The first time, choose “More info” → “Run anyway”.</li>
         <li><strong>macOS:</strong> open the .dmg and drag Optaller to Applications. The first time, allow it in System Settings → Privacy &amp; Security → “Open Anyway”.</li>
