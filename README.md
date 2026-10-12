@@ -1,8 +1,8 @@
 # Optaller
 
 Diseño y análisis óptico para fotografía y cine, hecho desde un taller de ópticas (Fix and Focus
-Lab, Madrid). Funciona en tu ordenador, sin conexión, con la interfaz en el navegador, en
-castellano o en inglés.
+Lab, Madrid). Funciona en tu ordenador, sin conexión, con la interfaz en el navegador (en macOS,
+en su propia ventana), en castellano o en inglés.
 
 **[Web del proyecto](https://fixandfocus.github.io/optaller/)** · **[Descargar](../../releases/latest)** · [English](#in-english)
 
@@ -10,7 +10,7 @@ castellano o en inglés.
 
 - Diseñar desde cero u optimizar, viendo reaccionar los rayos.
 - Anamórficos en sus dos ejes.
-- Ficha de foto y cine: MTF, T-stop, iluminación y cobertura de formatos.
+- Ficha de foto y cine: MTF, diagrama de manchas, T-stop, iluminación y cobertura de formatos.
 - Validación cruzada entre motores (Optiland, RayOptics y un trazador propio).
 - Fantasmas con el tratamiento de cada cara (también por capas, con el color de su reflejo), bokeh,
   enfoque, respiración y leva de enfoque.
@@ -60,9 +60,10 @@ versiones para ellos.
   Se abre una pestaña del navegador con el programa. Se queda una consola minimizada:
   cerrarla cierra el programa. En Ajustes, «Abrir en una ventana propia» hace que la próxima vez
   se abra en su ventana en vez de en el navegador.
-- **macOS**: abre el .dmg y arrastra `Optaller` a Aplicaciones. Para cerrarlo: Ajustes
-  (el icono de arriba a la derecha) → «Cerrar el programa»; o cierra todas sus pestañas y
-  se cierra solo a los dos minutos.
+- **macOS**: abre el .dmg y arrastra `Optaller` a Aplicaciones. Se abre en su propia ventana, y
+  cerrarla cierra el programa. Si lo prefieres en el navegador, quita «Abrir en una ventana propia»
+  en Ajustes (el icono de arriba a la derecha); entonces se cierra desde Ajustes → «Cerrar el
+  programa», o solo a los dos minutos de cerrar su última pestaña.
 
 El idioma se elige en Ajustes → «Idioma · Language». La primera vez sigue al del sistema.
 
@@ -134,14 +135,14 @@ En [Issues](../../issues) de este repositorio. Para una licencia comercial, tamb
 
 Optaller is optical design and analysis software for photo and cinema lenses, made in a lens
 workshop (Fix and Focus Lab, Madrid). It runs on your computer, offline, with its interface in
-the browser, in Spanish or English (Settings → “Idioma · Language”).
+the browser (on macOS, in its own window), in Spanish or English (Settings → “Idioma · Language”).
 
 **[Project page](https://fixandfocus.github.io/optaller/)** · **[Download](../../releases/latest)**
 
 [![The Optaller design bench: cross-section with rays, data sheet and surface table](docs/img/banco-en.jpg)](https://fixandfocus.github.io/optaller/)
 
 - Design from scratch or optimize, watching the rays react. Anamorphics in their two axes.
-- Photo and cinema data sheet: MTF, T-stop, illumination, format coverage.
+- Photo and cinema data sheet: MTF, spot diagrams, T-stop, illumination, format coverage.
 - Cross-validation between engines (Optiland, RayOptics and an in-house ray tracer).
 - Ghosts with the coating of each surface (also as real layer stacks, with the color of each
   reflection), bokeh, focus breathing and the focus cam.
