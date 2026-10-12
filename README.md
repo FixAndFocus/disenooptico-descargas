@@ -34,7 +34,9 @@ en su propia ventana), en castellano o en inglés.
 - Medir la MTF en la foto de un borde inclinado (ISO 12233), con avisos de lo que falsea la medida;
   también sobre el bruto de la cámara sin revelar (DNG, ARW, CR3, NEF…) y el FITS de un sensor suelto.
   Con la cámara conectada (una Sony α7R II o α7 III con su programa, un sensor USB), cada foto nueva
-  se mide sola; y lo medido sale en un informe en PDF para entregar con el objetivo.
+  se mide sola; y lo medido sale en un informe en PDF para entregar con el objetivo. La luz desigual
+  se corrige sola, se puede quitar el píxel del sensor (la MTF de la óptica sola) y una medida
+  guardada antes de una reparación se compara con la de después.
 - Barrido de foco: de una serie de fotos, el mejor foco (el error de tiraje) y su margen. Y con varios
   barridos (tangencial y sagital, eje y borde, un lado y otro), el astigmatismo, la curvatura de campo y
   la inclinación del plano de imagen, medidos, al lado de los del diseño. Los bordes de una carta se
@@ -138,6 +140,9 @@ al inglés. Los componentes de software libre que lleva dentro conservan sus lic
 
 ## Fallos y sugerencias
 
+**¿Qué cambiarías?** Hay un hilo fijado en los [issues](../../issues) para contar qué falta, qué sobra y
+qué se rompe. El programa lleva el enlace en Ayuda → «Sugerencias y fallos».
+
 En [Issues](../../issues) de este repositorio. Para una licencia comercial, también.
 
 ---
@@ -166,7 +171,9 @@ the browser (on macOS, in its own window), in Spanish or English (Settings → �
 - MTF measured from the photo of a slanted edge (ISO 12233), with warnings about what distorts it; also on
   the undeveloped camera raw file (DNG, ARW, CR3, NEF…) and a bare sensor's FITS; with a tethered camera
   (a Sony α7R II or α7 III, a USB sensor) each new photo is measured by itself, and a PDF report gathers
-  what was measured. Focus sweep: best focus and its margin from a
+  what was measured. Uneven light is corrected automatically, the sensor pixel can be removed (the
+  MTF of the optics alone), and a measurement saved before a repair is compared with the one after.
+  Focus sweep: best focus and its margin from a
   series of photos; with several sweeps, measured astigmatism, field curvature and image-plane tilt.
   Chart edges are found automatically, and the sweep can run by itself with a GRBL stage and a
   Raspberry Pi camera (not yet tested with real hardware).
